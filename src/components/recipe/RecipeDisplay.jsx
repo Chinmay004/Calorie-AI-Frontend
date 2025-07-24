@@ -47,7 +47,8 @@ const RecipeDisplay = ({ recipe }) => {
                         {Array.isArray(recipe.image) ? (
                             recipe.image.map((imageFilename, index) => {
                                 const sanitizedFilename = imageFilename.replace(/[^a-zA-Z0-9.-]+/g, '-');
-                                const imageUrl = `${API_URL}/generated_images/${sanitizedFilename}`;
+                                // const imageUrl = `${API_URL}/generated_images/${sanitizedFilename}`;
+                                const imageUrl = `https://storage.googleapis.com/${import.meta.env.VITE_FIREBASE_STORAGE_BUCKET}/recipes/${recipe.image[0]}`;
                                 return (
                                     <img
                                         key={index}
@@ -64,7 +65,11 @@ const RecipeDisplay = ({ recipe }) => {
                             })
                         ) : (
                             <img
-                                src={`${API_URL}/generated_images/${recipe.image.replace(/[^a-zA-Z0-9.-]+/g, '-')}`}
+                            src={`https://storage.googleapis.com/${import.meta.env.VITE_FIREBASE_STORAGE_BUCKET}/recipes/${recipe.image[0].replace(
+                             
+                                /[^a-zA-Z0-9.-]+/g,
+                                "-"
+                                )}`}
                                 alt={recipe.title}
                                 className="max-w-full h-auto rounded"
                                 onError={(e) => {

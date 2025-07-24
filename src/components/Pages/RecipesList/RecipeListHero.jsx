@@ -128,7 +128,10 @@ const RecipeListHero = () => {
                                 <Link to={`/recipe/${recipe._id}`} className="block">
                                     {recipe.image && recipe.image.length > 0 && (
                                     <img
-                                        src={`${API_URL}/generated_images/${recipe.image[0].replace(
+                                   
+                                    
+                                        src={`https://storage.googleapis.com/${import.meta.env.VITE_FIREBASE_STORAGE_BUCKET}/recipes/${recipe.image[0].replace(
+                                        // src={`${API_URL}/generated_images/${recipe.image[0].replace(
                                         /[^a-zA-Z0-9.-]+/g,
                                         "-"
                                         )}`}

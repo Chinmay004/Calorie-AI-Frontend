@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Pages/Home/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import RecipeDetails from "./components/recipe/RecipeDetails";
-import CreateRecipe2 from "./components/Pages/Create/CreateRecipe2";
+import CreateRecipe2 from "./components/Pages/create/CreateRecipe2";
 import RecipeList2 from "./components/Pages/RecipesList/RecipeList2";
 import Auth2 from "./components/auth/Auth2";
 import Login2 from "./components/auth/Login2";
-
 import MyProfile from "./components/Pages/MyProfile";
 
 
