@@ -17,17 +17,11 @@ function App() {
       <Routes>
         <Route path="/Auth2" element={<Auth2 />} />
         <Route path="/login2" element={<Login2 />} />
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<Home />} />
         <Route path="/recipes2" element={<PrivateRoute><RecipeList2 /></PrivateRoute>} />
         <Route path="/recipe/:recipeId" element={<PrivateRoute><RecipeDetails /></PrivateRoute>} />
         <Route path="/createRecipe2" element={<PrivateRoute><CreateRecipe2 /></PrivateRoute>} />
         <Route path="/myProfile" element={<PrivateRoute><MyProfile /></PrivateRoute>} />
-
-
-        
-
-
-
       </Routes>
     </Router>
   );

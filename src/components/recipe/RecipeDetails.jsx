@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getRecipeById } from '../../api'; // Create this API function
 import RecipeDisplay from './RecipeDisplay';
+import Navbar from '../layout/Navbar';
 
 const RecipeDetails = () => {
     const { recipeId } = useParams();
@@ -31,10 +32,14 @@ const RecipeDetails = () => {
     }
 
     return (
-       
-        <RecipeDisplay recipe={recipe}  />
+
+        <>
+            <Navbar />
+            <RecipeDisplay recipe={recipe} />
+        </>
+
     )
-   
+
 };
 
 export default RecipeDetails;
